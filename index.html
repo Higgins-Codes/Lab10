@@ -20,7 +20,7 @@
     <img src="./styles/settings.svg" alt="settings" width=40 height=40>
   </header>
 
-  <main class="double-column"></main>
+  <main class="double-column" id="main"></main>
 
   <entry-page></entry-page>
 
@@ -31,6 +31,7 @@
   <!-- Our custom script. -->
   <script type="text/javascript">
     (function() {
+      // original authKey is k8m82ms84hok2l7i029f3em7fs96mecd4d4e
       // We will write code here.
       var factory = splitio({
         core: {
@@ -46,9 +47,10 @@
         var treatment = client.getTreatment('double-column');
 
         if (treatment === 'on') {
-          // Insert code for on treatment
+          // select main and add class double-column
         } else if (treatment === 'off') {
-          // Insert code for off treatment
+          console.log("Off");
+          document.getElementById('main').classList.remove('double-column');
         } else {
           // Insert code for control treatment
         }
